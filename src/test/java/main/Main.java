@@ -10,7 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
         TestNG testng = new TestNG();
-        testng.setTestClasses(new Class[] {
+        testng.setTestClasses(new Class[]{
                 CreateUserPostTest.class,
                 HeaderCheckTest.class,
                 SimpleGetTest.class,
