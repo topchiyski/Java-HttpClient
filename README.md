@@ -2,7 +2,7 @@
 
 A small API testing project built on Java's built-in `java.net.http.HttpClient` (Java 11+), with [TestNG](https://testng.org/) for assertions and [SLF4J](https://www.slf4j.org/) for logging. The tests call the public [httpbingo.org](https://httpbingo.org) echo service, so no other HTTP or REST library is needed.
 
-This repo is the companion example for my LinkedIn article: [The 15-second wait before test 1 even starts](https://www.linkedin.com/pulse/15-second-wait-before-test-1-even-starts-stoyan-topchiyski-qa1pf).
+This repo is the companion example for my LinkedIn article: [Zero-Dependency API Testing in Java: Ditch Heavy Libraries for Built-In HttpClient + TestNG](https://www.linkedin.com/pulse/15-second-wait-before-test-1-even-starts-stoyan-topchiyski-qa1pf).
 
 ## Tech stack
 
