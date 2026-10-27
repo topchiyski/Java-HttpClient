@@ -8,8 +8,14 @@ import org.testng.annotations.Test;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/** Tests expected HTTP status codes for several echo-service endpoints. */
 public class StatusCheckTest extends BaseApiTest {
 
+    /**
+     * Supplies endpoint paths and their expected HTTP status codes.
+     *
+     * @return rows containing an endpoint path and its expected status code
+     */
     @DataProvider(name = "statusEndpoints")
     public Object[][] statusEndpoints() {
         return new Object[][]{
@@ -19,6 +25,13 @@ public class StatusCheckTest extends BaseApiTest {
         };
     }
 
+    /**
+     * Sends a GET request and verifies the endpoint's status code.
+     *
+     * @param endpoint endpoint path to request
+     * @param expectedStatus expected HTTP status code
+     * @throws Exception if sending the HTTP request fails
+     */
     @Test(dataProvider = "statusEndpoints")
     public void testEndpointStatusCodes(String endpoint, int expectedStatus) throws Exception {
         HttpRequest request = requestTo(endpoint).GET().build();

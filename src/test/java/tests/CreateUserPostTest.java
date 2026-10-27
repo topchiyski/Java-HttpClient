@@ -7,8 +7,14 @@ import org.testng.annotations.Test;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/** Tests submitting a JSON payload to the echo service's POST endpoint. */
 public class CreateUserPostTest extends BaseApiTest {
 
+    /**
+     * Posts a sample user payload and verifies that the service accepts and echoes it.
+     *
+     * @throws Exception if sending the HTTP request fails
+     */
     @Test
     public void testCreateNewUser() throws Exception {
         // Clean multi-line JSON using Java Text Blocks

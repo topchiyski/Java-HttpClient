@@ -10,6 +10,7 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+/** Demonstrates a standalone GET request using Java's built-in HTTP client. */
 public class SimpleGetTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SimpleGetTest.class);
@@ -17,6 +18,11 @@ public class SimpleGetTest {
     private static final String GET_URL = "https://httpbingo.org/get";
     private static final int HTTP_OK = 200;
 
+    /**
+     * Sends a GET request to the echo endpoint and verifies its status and response body.
+     *
+     * @throws Exception if sending the HTTP request fails
+     */
     @Test
     public void testGetUserStatus() throws Exception {
         // 1. Create the client
