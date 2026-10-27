@@ -6,7 +6,9 @@ import tests.HeaderCheckTest;
 import tests.SimpleGetTest;
 import tests.StatusCheckTest;
 
-/** Runs the project's TestNG API tests from a standalone entry point. */
+/**
+ * Runs the project's TestNG API tests from a standalone entry point.
+ */
 public class Main {
 
     /**

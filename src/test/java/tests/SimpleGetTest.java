@@ -10,7 +10,9 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-/** Demonstrates a standalone GET request using Java's built-in HTTP client. */
+/**
+ * Demonstrates a standalone GET request using Java's built-in HTTP client.
+ */
 public class SimpleGetTest {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SimpleGetTest.class);

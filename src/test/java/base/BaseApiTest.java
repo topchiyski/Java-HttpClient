@@ -14,34 +14,51 @@ import java.time.Duration;
  */
 public class BaseApiTest {
 
-    /** Logger shared by API test subclasses. */
+    /**
+     * Logger shared by API test subclasses.
+     */
     protected static final Logger LOGGER = LoggerFactory.getLogger(BaseApiTest.class);
 
-    /** Base URL for the public HTTP echo service used by the tests. */
+    /**
+     * Base URL for the public HTTP echo service used by the tests.
+     */
     protected static final String BASE_URL = "https://httpbingo.org";
 
     // Clear timeout constants instead of magic numbers
-    /** Maximum time allowed to establish an HTTP connection. */
+    /**
+     * Maximum time allowed to establish an HTTP connection.
+     */
     protected static final Duration CONNECT_TIMEOUT = Duration.ofSeconds(5);
-    /** Maximum time allowed for an individual HTTP request. */
+    /**
+     * Maximum time allowed for an individual HTTP request.
+     */
     protected static final Duration REQUEST_TIMEOUT = Duration.ofSeconds(10);
 
     // Reusable HTTP status code constants for clean assertions
-    /** HTTP status code indicating a successful request. */
+    /**
+     * HTTP status code indicating a successful request.
+     */
     protected static final int HTTP_OK = 200;
-    /** HTTP status code indicating that authentication is required. */
+    /**
+     * HTTP status code indicating that authentication is required.
+     */
     protected static final int HTTP_UNAUTHORIZED = 401;
-    /** HTTP status code indicating that the requested resource was not found. */
+    /**
+     * HTTP status code indicating that the requested resource was not found.
+     */
     protected static final int HTTP_NOT_FOUND = 404;
 
     // Create ONE shared client for your whole test suite
-    /** Shared client configured to follow normal redirects and use the connection timeout. */
+    /**
+     * Shared client configured to follow normal redirects and use the connection timeout.
+     */
     protected static final HttpClient CLIENT = HttpClient.newBuilder()
             .followRedirects(HttpClient.Redirect.NORMAL) // Automatically follow 301/302 redirects
             .connectTimeout(CONNECT_TIMEOUT)             // Fail fast if the server is down
             .build();
 
     // Helper method that pre-fills the URL, timeout, and common headers
+
     /**
      * Creates a request builder with the service URL, request timeout, and JSON headers.
      *
@@ -57,6 +74,7 @@ public class BaseApiTest {
     }
 
     // Helper method that sends the request and automatically logs the details
+
     /**
      * Sends a request using the shared client, logs the request and response, and reads the body as a string.
      *

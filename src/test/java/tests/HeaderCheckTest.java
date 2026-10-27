@@ -7,7 +7,9 @@ import org.testng.annotations.Test;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-/** Tests response headers returned by the echo service. */
+/**
+ * Tests response headers returned by the echo service.
+ */
 public class HeaderCheckTest extends BaseApiTest {
 
     /**

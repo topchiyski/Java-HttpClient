@@ -7,7 +7,9 @@ import org.testng.annotations.Test;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-/** Tests submitting a JSON payload to the echo service's POST endpoint. */
+/**
+ * Tests submitting a JSON payload to the echo service's POST endpoint.
+ */
 public class CreateUserPostTest extends BaseApiTest {
 
     /**
