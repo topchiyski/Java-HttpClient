@@ -108,3 +108,7 @@ Logging uses `slf4j-simple` and goes to stderr. Each request logs the outgoing m
 2. Build a request with `requestTo("/your-endpoint")`.
 3. Send it with `sendAndLog(request)`, or with `CLIENT.send(...)` if you need a different body handler.
 4. Check the result with TestNG's `Assert` (argument order is `actual, expected`).
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
